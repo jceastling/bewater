@@ -1,0 +1,1 @@
+worker: node brucebot.js
