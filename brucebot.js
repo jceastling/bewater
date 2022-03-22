@@ -3,6 +3,7 @@ const client = new Discord.Client()
 
 // Defining my variables. I think this is important?
 var CONFIG = require('./config.json');
+var prefix = CONFIG.prefix;
 var quote = CONFIG.quote;
 var emoji = CONFIG.emoji;
 var util = require('util');
@@ -18,7 +19,7 @@ client.on('message', (receivedMessage) => {
         return
     }
 
-    if (receivedMessage.content.startsWith(@@)) {
+    if (receivedMessage.content.startsWith(prefix)) {
         processCommand(receivedMessage)
     }
 })
@@ -37,7 +38,7 @@ function processCommand(receivedMessage) {
         receivedMessage.channel.send(""" + words + """)
     } else if (primaryCommand == "help") {
         receivedMessage.channel.send("Right now you can ask for a @@quote or ask me to @@emote.")
-        } else if (primaryCommand == "emote") {
+    } else if (primaryCommand == "emote") {
 			    receivedMessage.channel.send(":" + emoji[Math.floor(Math.random() * emoji.length)] + ": " + " :" + emoji[Math.floor(Math.random() * emoji.length)] + ": " + " :" + emoji[Math.floor(Math.random() * emoji.length)] + ":")
 		    } else {
 		        receivedMessage.channel.send("I'm sorry, my friend--try `@@help` instead.")
