@@ -3,6 +3,7 @@ const client = new Discord.Client()
 
 // Defining my variables. I think this is important?
 var CONFIG = require('./config.json');
+var prefix = CONFIG.prefix;
 var quote = CONFIG.quote;
 var emoji = CONFIG.emoji;
 var util = require('util');
