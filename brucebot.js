@@ -34,7 +34,7 @@ function processCommand(receivedMessage) {
 
     if (primaryCommand == "quote") {
 	    var words = quote[Math.floor(Math.random() * quote.length)]
-        receivedMessage.channel.send(words)
+        receivedMessage.channel.send("" + words + "")
     } else if (primaryCommand == "help") {
         receivedMessage.channel.send("Right now you can ask for a @@quote or ask me to @@emote.")
         } else if (primaryCommand == "emote") {
