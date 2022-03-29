@@ -34,7 +34,7 @@ function processCommand(receivedMessage) {
     console.log("Arguments: " + arguments) // There may not be any arguments
 
     if (primaryCommand == "quote") {
-        receivedMessage.channel.send(quote[Math.floor(Math.random() * quote.length)])
+        receivedMessage.channel.send(quote[Math.floor(Math.random() * quote.length)]) // Sends a random quote
     } else if (primaryCommand == "help") {
         receivedMessage.channel.send("Right now you can ask for a @@quote or ask me to @@emote.")
     } else if (primaryCommand == "emote") {
